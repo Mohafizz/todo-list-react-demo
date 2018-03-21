@@ -1,0 +1,13 @@
+#title {
+  font-family: Georgia;
+  font-size: x-large;
+  background: gold;
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+.notDone {
+  text-transform: uppercase;
+}

@@ -1,8 +1,10 @@
 #todo-list {
   max-width: 600px;
-  margin: 0 auto
+  margin: 0 auto;
+  background-color: coral;
+  text-align: left;
 }
 
 #todo-title {
-  background: gold
+  background-color: aqua;
 }

@@ -15,6 +15,6 @@ describe("TodoForm ", () => {
   it("should handle input for newtodo item", () => {
     const newtodoDescription = "testing";
     const wrapper = shallow(<TodoForm value={newtodoDescription} />);
-    expect(wrapper.find("input")).toHaveLength(2);
+    expect(wrapper.find("input")).toHaveLength(1);
   });
 });

@@ -5,9 +5,14 @@ const TodoForm = props => (
   <div>
     <form onSubmit={props.submitForm}>
       <label>
-        <input type="text" value={props.value} onChange={props.changeForm} />
+        <input
+          id="form-input"
+          type="text"
+          value={props.value}
+          onChange={props.changeForm}
+        />
       </label>
-      <input type="submit" value="Submit" />
+      <input id="form-submit" type="submit" value="Submit" />
     </form>
   </div>
 );

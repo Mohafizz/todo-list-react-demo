@@ -57,8 +57,10 @@ class TodoList extends Component {
     event.preventDefault();
     const todosCopy = [...this.state.todos];
     todosCopy.push({ description: this.state.newtodo, isCompleted: false });
-    this.setState({ todos: todosCopy });
-    this.input.type = "";
+    this.setState({
+      todos: todosCopy,
+      newtodo: { value: "" }
+    });
   }
 }
 

@@ -8,6 +8,5 @@ describe("TodoItem ", () => {
   it("should render TodoItem properly", () => {
     const todos = [{ description: "test", isCompleted: false }];
     const wrapper = shallow(<TodoItem todo={todos} />);
-    console.log("wrapper: ", wrapper.debug());
   });
 });

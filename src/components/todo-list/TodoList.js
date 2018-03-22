@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { todos } from "../../utils/seedData";
 import "./TodoList.css";
 import TodoItem from "../todo-item/TodoItem";
+import TodoForm from "../todo-form/TodoForm";
 
 class TodoList extends Component {
   constructor() {
@@ -26,16 +27,11 @@ class TodoList extends Component {
           );
         })}
         <br />
-        <form onSubmit={this.handleSubmit.bind(this)}>
-          <label>
-            <input
-              type="text"
-              value={this.state.newtodo.description}
-              onChange={this.handleChange.bind(this)}
-            />
-          </label>
-          <input type="submit" value="Submit" />
-        </form>
+        <TodoForm
+          submitForm={this.handleSubmit.bind(this)}
+          value={this.state.newtodo.description}
+          changeForm={this.handleChange.bind(this)}
+        />
       </div>
     );
   }

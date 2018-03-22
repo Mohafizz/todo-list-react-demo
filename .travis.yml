@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+- '9'
+cache:
+  directories:
+  - node_modules
+script:
+- yarn test
+- yarn build
+deploy:
+  provider: heroku
+  app: mohafizz-react-todolist
+  on:
+    repo: Mohafizz/todo-list-react-demo
+  api_key:
+    secure: HxP8A4a4yqSl3AfEmAOedTZ96L/c57a9+1li6vXRyHCtcLhncpcI8JwPSfmT4ecI4nON6EB7mGhx6DUB9+WpcnzilsNAU+FsHvqhqEldVXX4RdxT9YzvurGg5DcLFbx+DklEBd9j9q4ydNKIwQdjSszNKnJrf9BskcS+IWm572K3QmsOHPqZGPfDG2T39mNI+z97pj+A4uHY6oMupNOao803CokF4Vxcj0ygExprhQFDwkzP1yVzErgACq8fwLVFJFigATBaIDBJccoEfH7pRqlB6asRvUtYsTyBcv1S3iZn0RN2812vHOul/BFYuLLd/rYjwNXFLYWwiLas+mJvliSdO9dmvE3JWfMh959n2sGtHSURQLdQnvjDrD3UC/x+Frhk7C5JQWKCwlyjeTfgh/WKQ8iPyim2V7GU3evSTrJ8rlBbigQXRAXtBk5WmVChPGeZdi3egfIlK7X4MzEaQa6R6g3G7Krww6qiIpnPk/H4TeAB5T169jtr5V4ma6V2C6dE9ioW3zmsGrbGlhLlcsWkqP71N4LptJsMBlxjBZls868/4G07yM9Mmi92QESPQohBihF/a7FuR9FXNhbkasxyn0Sg95xyvvofV3tIsj9wvygiZXm151RUk6BDQlpFCAFJDRycvoXfiZF+YYjdhDZG2Sb8hytIlHaBt6MvVjs=

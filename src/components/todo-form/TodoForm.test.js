@@ -24,4 +24,11 @@ describe("TodoForm ", () => {
     const wrapper = shallow(<TodoForm value={newtodoDescription} />);
     expect(wrapper.find("input#form-input").props().value).toBe("testing");
   });
+
+  it("should handle onChange event with handleChange method ", () => {
+    const wrapper = shallow(<TodoForm changeForm="event.target.value" />);
+    expect(wrapper.find("input#form-input").props().onChange).toBe(
+      "event.target.value"
+    );
+  });
 });

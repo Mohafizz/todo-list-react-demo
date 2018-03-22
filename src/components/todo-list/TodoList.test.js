@@ -12,6 +12,5 @@ describe("TodoList ", () => {
     expect(wrapper.find("h1#todo-title")).toHaveLength(1);
     expect(wrapper.find(TodoItem)).toHaveLength(wrapper.state().todos.length);
     expect(wrapper.find(TodoForm)).toHaveLength(1);
-    console.log('wrapper.find("form"): ', wrapper.find(TodoForm));
   });
 });

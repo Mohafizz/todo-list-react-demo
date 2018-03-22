@@ -8,7 +8,7 @@ class TodoList extends Component {
     super();
     this.state = {
       todos: todos,
-      newtodo: { value: "" }
+      newtodo: { description: "", isCompleted: false }
     };
   }
 
@@ -30,7 +30,7 @@ class TodoList extends Component {
           <label>
             <input
               type="text"
-              value={this.state.value}
+              value={this.state.newtodo.description}
               onChange={this.handleChange.bind(this)}
             />
           </label>
@@ -50,18 +50,19 @@ class TodoList extends Component {
   }
 
   handleChange(event) {
-    this.setState({ newtodo: event.target.value });
+    this.setState({
+      newtodo: { description: event.target.value, isCompleted: false }
+    });
   }
 
   handleSubmit(event) {
     event.preventDefault();
     const todosCopy = [...this.state.todos];
-    todosCopy.push({ description: this.state.newtodo, isCompleted: false });
+    todosCopy.push(this.state.newtodo);
     this.setState({
       todos: todosCopy,
-      newtodo: { value: "" }
+      newtodo: { description: "", isCompleted: false }
     });
   }
 }
-
 export default TodoList;

@@ -26,9 +26,12 @@ describe("TodoForm ", () => {
   });
 
   it("should handle onChange event with handleChange method ", () => {
-    const wrapper = shallow(<TodoForm changeForm="event.target.value" />);
-    expect(wrapper.find("input#form-input").props().onChange).toBe(
-      "event.target.value"
-    );
+    const mockHandler = jest.fn();
+    const wrapper = shallow(<TodoForm changeForm={mockHandler} />);
+    wrapper
+      .find("input#form-input")
+      .props()
+      .onChange({ target: { value: "a" } });
+    expect(mockHandler).toBeCalled();
   });
 });

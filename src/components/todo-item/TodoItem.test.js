@@ -7,6 +7,6 @@ import "../todo-list/TodoList.css";
 describe("TodoItem ", () => {
   it("should render TodoItem properly", () => {
     const todos = [{ description: "test", isCompleted: false }];
-    const wrapper = shallow(<TodoItem todo={todos} done="task completed" />);
+    const wrapper = shallow(<TodoItem todo={todos} done={() => {}} />);
   });
 });

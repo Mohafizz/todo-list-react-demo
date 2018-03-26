@@ -66,4 +66,8 @@ class TodoList extends Component {
 TodoList.propTypes = {
   title: PropTypes.string.isRequired
 };
+
+TodoList.defaultProps = {
+  title: "My todo list"
+};
 export default TodoList;

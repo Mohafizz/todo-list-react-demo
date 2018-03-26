@@ -14,7 +14,7 @@ describe("TodoList ", () => {
     expect(wrapper.find(TodoForm)).toHaveLength(1);
   });
 
-  it.only("should add a new todo when taskCompleted method is called", () => {
+  it.skip("should add a new todo when taskCompleted method is called", () => {
     const newTodo = { description: "Test", isCompleted: false };
     const wrapper = shallow(<TodoList />);
     const expectedLength = wrapper.state().todos.length + 1;

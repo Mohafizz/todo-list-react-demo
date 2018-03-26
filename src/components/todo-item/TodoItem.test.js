@@ -8,8 +8,5 @@ describe("TodoItem ", () => {
   it("should render TodoItem properly", () => {
     const todos = [{ description: "test", isCompleted: false }];
     const wrapper = shallow(<TodoItem todo={todos} done="task completed" />);
-
-    // wrapper.find("#text").simulate("change", { target: { value: "a" } });
-    // expect(wrapper.state().value).toEqual("a");
   });
 });

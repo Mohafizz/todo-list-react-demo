@@ -25,7 +25,7 @@ describe("TodoForm ", () => {
     expect(wrapper.find("input#form-input").props().value).toBe("testing");
   });
 
-  it("should handle onChange event with handleChange method ", () => {
+  it("should handle onChange event(mocked) with handleChange method from Parent ", () => {
     const mockHandler = jest.fn();
     const wrapper = shallow(<TodoForm changeForm={mockHandler} />);
     wrapper

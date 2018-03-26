@@ -1,5 +1,6 @@
 import React from "react";
 import "./TodoItem.css";
+import PropTypes from "prop-types";
 
 const TodoItem = props => {
   const strikeThrough = props.todo.isCompleted ? "done" : "";
@@ -9,4 +10,11 @@ const TodoItem = props => {
     </li>
   );
 };
+
+TodoItem.propTypes = {
+  done: PropTypes.func.isRequired,
+  isCompleted: PropTypes.string,
+  description: PropTypes.string
+};
+
 export default TodoItem;

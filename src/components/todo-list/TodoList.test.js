@@ -13,4 +13,20 @@ describe("TodoList ", () => {
     expect(wrapper.find(TodoItem)).toHaveLength(wrapper.state().todos.length);
     expect(wrapper.find(TodoForm)).toHaveLength(1);
   });
+
+  it.only("should add a new todo when taskCompleted method is called", () => {
+    const newTodo = { description: "Test", isCompleted: false };
+    const wrapper = shallow(<TodoList />);
+    const expectedLength = wrapper.state().todos.length + 1;
+
+    wrapper.find("TodoItem").length;
+    console.log(
+      wrapper
+        .find("TodoItem")
+        .props()
+        .done(newTodo)
+    );
+
+    expect(wrapper.state().todos).toHaveLength(expectedLength);
+  });
 });

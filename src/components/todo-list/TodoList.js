@@ -3,6 +3,7 @@ import { todos } from "../../utils/seedData";
 import "./TodoList.css";
 import TodoItem from "../todo-item/TodoItem";
 import TodoForm from "../todo-form/TodoForm";
+import PropTypes from "prop-types";
 
 class TodoList extends Component {
   constructor() {
@@ -61,4 +62,8 @@ class TodoList extends Component {
     });
   }
 }
+
+TodoList.propTypes = {
+  title: PropTypes.string.isRequired
+};
 export default TodoList;

@@ -16,7 +16,7 @@ class TodoList extends Component {
 
   render() {
     return (
-      <div id="todo-list" >
+      <div id="todo-list">
         <h1 id="todo-title">{this.props.title}</h1>
         {this.state.todos.map((todo, i) => {
           return (

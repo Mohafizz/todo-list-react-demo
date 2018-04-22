@@ -18,9 +18,9 @@ describe("TodoList ", () => {
 
   it("should match the snapshot", () => {
     const tree = renderer.create(<TodoList />);
-    console.log("tree.toJSON(): ", tree.toJSON());
-    console.log("tree.toTree(): ", tree.toTree());
-    console.log("wrapper: ", wrapper.debug());
+    // console.log("tree.toJSON(): ", tree.toJSON());
+    // console.log("tree.toTree(): ", tree.toTree());
+    // console.log("wrapper: ", wrapper.debug());
     expect(tree.toJSON()).toMatchSnapshot();
   });
 });

@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TodoList  should match the snapshot 1`] = `
+<div
+  id="todo-list"
+>
+  <h1
+    id="todo-title"
+  >
+    My todo list
+  </h1>
+  <li
+    className=""
+    id="todo-item"
+    onClick={[Function]}
+  >
+    buy milk
+  </li>
+  <li
+    className=""
+    id="todo-item"
+    onClick={[Function]}
+  >
+    drink juice
+  </li>
+  <li
+    className=""
+    id="todo-item"
+    onClick={[Function]}
+  >
+    eat lunch
+  </li>
+  <li
+    className=""
+    id="todo-item"
+    onClick={[Function]}
+  >
+    learn react
+  </li>
+  <li
+    className=""
+    id="todo-item"
+    onClick={[Function]}
+  >
+    go home
+  </li>
+  <br />
+  <div>
+    <form
+      onSubmit={[Function]}
+    >
+      <label>
+        <input
+          id="form-input"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </label>
+      <input
+        id="form-submit"
+        type="submit"
+        value="Submit"
+      />
+    </form>
+  </div>
+</div>
+`;
